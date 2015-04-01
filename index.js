@@ -15,11 +15,82 @@ var targets = [
 		height: 1024,
 		width: 1024,
 		radius: 160
+	},
+	{
+		name: 'iPhone',
+		height: 60,
+		width: 60,
+		radius: 9
+	},
+	{
+		name: 'iPhone@2x',
+		height: 120,
+		width: 120,
+		radius: 19
+	},
+	{
+		name: 'iPhone@3x',
+		height: 180,
+		width: 180,
+		radius: 28
+	},
+	{
+		name: 'iPad',
+		height: 76,
+		width: 76,
+		radius: 12
+	},
+	{
+		name: 'iPad@2x',
+		height: 152,
+		width: 152,
+		radius: 24
+	},
+	{
+		name: 'Google Play',
+		height: 512,
+		width: 512,
+		radius: 80
+	},
+	{
+		name: 'Android-ldpi',
+		height: 36,
+		width: 36,
+		radius: 6
+	},
+	{
+		name: 'Android-mdpi',
+		height: 48,
+		width: 48,
+		radius: 8
+	},
+	{
+		name: 'Android-hdpi',
+		height: 72,
+		width: 72,
+		radius: 11
+	},
+	{
+		name: 'Android-xhdpi',
+		height: 96,
+		width: 96,
+		radius: 15
+	},
+	{
+		name: 'Android-xxhdpi',
+		height: 144,
+		width: 144,
+		radius: 23
+	},
+	{
+		name: 'Android-xxxhdpi',
+		height: 192,
+		width: 192,
+		radius: 30
 	}
 ];
 
 var iTarget = 0;
-
 
 var baseIconPath = process.argv.length > 2 && process.argv[2];
 if (!baseIconPath){
