@@ -46,6 +46,30 @@ var targets = {
 			height: 152,
 			width: 152,
 			radius: 24
+		},
+		{
+			name: 'icon-57',
+			height: 57,
+			width: 57,
+			radius: 9
+		},
+		{
+			name: 'icon-57-2x',
+			height: 114,
+			width: 114,
+			radius: 18
+		},
+		{
+			name: 'icon-72',
+			height: 72,
+			width: 72,
+			radius: 11
+		},
+		{
+			name: 'icon-72-2x',
+			height: 144,
+			width: 144,
+			radius: 23
 		}
 	],
 	"android": [
@@ -56,37 +80,37 @@ var targets = {
 			radius: 80
 		},
 		{
-			name: 'Android-ldpi',
+			name: 'icon-36-ldpi',
 			height: 36,
 			width: 36,
 			radius: 6
 		},
 		{
-			name: 'Android-mdpi',
+			name: 'icon-48-mdpi',
 			height: 48,
 			width: 48,
 			radius: 8
 		},
 		{
-			name: 'Android-hdpi',
+			name: 'icon-72-hdpi',
 			height: 72,
 			width: 72,
 			radius: 11
 		},
 		{
-			name: 'Android-xhdpi',
+			name: 'icon-96-xhdpi',
 			height: 96,
 			width: 96,
 			radius: 15
 		},
 		{
-			name: 'Android-xxhdpi',
+			name: 'icon-144-xxhdpi',
 			height: 144,
 			width: 144,
 			radius: 23
 		},
 		{
-			name: 'Android-xxxhdpi',
+			name: 'icon-192-xxxhdpi',
 			height: 192,
 			width: 192,
 			radius: 30
