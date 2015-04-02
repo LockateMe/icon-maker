@@ -190,9 +190,11 @@ function conversion(){
 
 	function processOne(end){
 		var currentTarget = currentTargets[iTarget];
+		var padding = currentTarget.radius / 2;
 		//var baseImage = gm(baseIconPath);
 		var destination = path.join(currentFolder, currentTarget.name + '.png');
 		var maskDest = path.join(outputFolder, 'mask.png');
+		var resizedDest = path.join(outputFolder, 'resized.png');
 		console.log('Converting for ' + currentTarget.name);
 		im.convert([
 			'-size', currentTarget.width + 'x' + currentTarget.height,
@@ -208,24 +210,36 @@ function conversion(){
 
 			im.convert([
 				baseIconPath,
-				'-resize', currentTarget.width + 'x' + currentTarget.height,
-				'-matte',
-				maskDest,
-				'-compose',
-				'DstIn',
-				'-composite', destination
+				'-resize', (currentTarget.width - 2 * padding).toString() + 'x' + (currentTarget.height - 2 * padding).toString(),
+				resizedDest
 			], function(err){
 				if (err){
 					console.error('Error with ImageMagick: ' + err);
 					process.exit(1);
 				}
 
-				iTarget++;
-				if (iTarget == currentTargets.length){
-					end()
-				} else {
-					processOne(end);
-				}
+				im.convert([
+					'-size', currentTarget.width + 'x' + currentTarget.height,
+					'xc:white',
+					resizedDest, '-geometry', '+' + padding + '+' + padding, '-composite',
+					'-matte',
+					maskDest,
+					'-compose',
+					'DstIn',
+					'-composite', destination
+				], function(err){
+					if (err){
+						console.error('Error with ImageMagick: ' + err);
+						process.exit(1);
+					}
+
+					iTarget++;
+					if (iTarget == currentTargets.length){
+						end()
+					} else {
+						processOne(end);
+					}
+				});
 			});
 		});
 	}
