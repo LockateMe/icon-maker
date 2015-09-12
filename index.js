@@ -70,6 +70,42 @@ var targets = {
 			height: 144,
 			width: 144,
 			radius: 23
+		},
+		{
+			name: 'icon-50',
+			height: 50,
+			width: 50,
+			radius: 8
+		},
+		{
+			name: 'icon-50-2x',
+			height: 100,
+			width: 100,
+			radius: 16
+		},
+		{
+			name: 'icon-small',
+			height: 29,
+			width: 29,
+			radius: 5
+		},
+		{
+			name: 'icon-small-2x',
+			height: 58,
+			width: 58,
+			radius: 9
+		},
+		{
+			name: 'icon-40',
+			height: 40,
+			width: 40,
+			radius: 6
+		},
+		{
+			name: 'icon-40-2x',
+			height: 80,
+			width: 80,
+			radius: 13
 		}
 	],
 	"android": [
